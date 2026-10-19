@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180" viewBox="0 0 640 180" role="img" aria-labelledby="title desc">
+  <title id="title">Steer Club</title>
+  <desc id="desc">Steer Club wordmark in rust on cream with an ink-like route underline.</desc>
+  <rect width="640" height="180" rx="18" fill="#F5EBDF"/>
+  <text x="42" y="119" fill="#C04E2A" font-family="Fraunces, Georgia, serif" font-size="92" font-style="italic" font-weight="600" letter-spacing="-7">steer</text>
+  <text x="322" y="119" fill="#C04E2A" font-family="Fraunces, Georgia, serif" font-size="68" font-style="italic" font-weight="500" letter-spacing="-5">club</text>
+  <path d="M 49 142 C 152 148, 228 137, 320 143 S 468 151, 586 139" fill="none" stroke="#C04E2A" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="585" cy="139" r="4" fill="#661414"/>
+</svg>
