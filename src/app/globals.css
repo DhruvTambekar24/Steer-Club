@@ -85,6 +85,8 @@ a { color: inherit; }
   text-decoration: none;
 }
 .wordmark .club { font-size: 19px; font-weight: 500; letter-spacing: -.055em; }
+.brand-mark-image { display: block; width: 100%; height: auto; }
+.landing-brand-mark { width: 124px; }
 .streak-pill {
   display: inline-flex;
   align-items: center;

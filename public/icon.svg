@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Steer Club paper note icon">
+  <rect width="512" height="512" rx="112" fill="#F5EBDF"/>
+  <rect x="70" y="76" width="372" height="360" rx="24" fill="#F8F2EB" stroke="#E6CBBD" stroke-width="8"/>
+  <path d="M116 160h274" stroke="#E6CBBD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M116 206h174" stroke="#E6CBBD" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="284" cy="292" r="93" fill="none" stroke="#E6CBBD" stroke-width="14"/>
+  <path d="M284 199a93 93 0 0 1 92 80" fill="none" stroke="#C04E2A" stroke-width="17" stroke-linecap="round"/>
+  <path d="m284 248 24 44-49 15" fill="none" stroke="#661414" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M118 366h127" stroke="#B58777" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="377" cy="366" r="12" fill="#C04E2A"/>
+</svg>

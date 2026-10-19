@@ -1,1 +1,1 @@
-{"routes":[{"path":"/","title":"Steer Club — The Doctor’s Note"}]}
+{"routes":[{"path":"/","title":"Steer Club — The Doctor’s Note"},{"path":"/play","title":"The note, turned over"},{"path":"/r/:id","title":"A note from Steer Club"},{"path":"/c/:id","title":"A friend’s seven-note challenge"},{"path":"/doubts","title":"Your margin notes"},{"path":"/care","title":"Explore your care options"},{"path":"/sources","title":"Sources and review"},{"path":"/privacy","title":"Privacy and deletion"},{"path":"/admin","title":"Admin funnel"}]}

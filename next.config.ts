@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   devIndicators: false,
-  output: "export",
+  outputFileTracingRoot: process.cwd(),
+  output: "standalone",
 };
 
 export default nextConfig;

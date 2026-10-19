@@ -1,0 +1,651 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "meal-skip",
+      "topic": "food",
+      "label": "Meal timing",
+      "claim": "Skipping dinner resets your metabolism?",
+      "format": "multiple-choice",
+      "prompt": "What does the evidence say about skipping dinner as a metabolism reset?",
+      "options": ["It resets metabolism for good", "It has not been shown to create a lasting reset", "It always lowers energy use the next day"],
+      "correctIndex": 1,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "Short studies show some changes in fuel use, not evidence of a lasting metabolic reset.",
+      "caveat": "These studies are short and do not establish what happens for every person over time.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Impact of breakfast skipping compared with dinner skipping on regulation of energy balance and metabolic risk","url":"https://www.sciencedirect.com/science/article/pii/S0002916522049085","supports":"A small randomized crossover study found no lower 24-hour energy expenditure from skipping dinner on the test day; it does not establish a lasting reset."},
+        {"title":"Early Time-Restricted Feeding Reduces Appetite and Increases Fat Oxidation but Does Not Affect Energy Expenditure in Humans","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6658129/","supports":"A short feeding study found no significant change in 24-hour or resting energy expenditure, while some short-term fuel-use measures changed."}
+      ]
+    },
+    {
+      "id": "willpower",
+      "topic": "body",
+      "label": "Weight and willpower",
+      "claim": "Weight is mostly willpower?",
+      "format": "multiple-choice",
+      "prompt": "Which statement best reflects what can influence body weight?",
+      "options": ["Willpower is the only factor", "Biology, habits, social conditions and surroundings can all play a part", "One food explains everyone’s weight"],
+      "correctIndex": 1,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "Body weight is not simply a matter of willpower. Biology, habits, social conditions and surroundings all play a part.",
+      "caveat": "No single factor explains everyone.",
+      "doubtTags": ["regain"],
+      "sources": [
+        {"title":"WHO: Obesity and overweight","url":"https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight","supports":"Describes obesity as shaped by interacting environmental, social, biological and behavioural determinants."},
+        {"title":"NHLBI: Overweight and Obesity Causes and Risk Factors","url":"https://www.nhlbi.nih.gov/health/overweight-and-obesity/causes","supports":"Lists genetics, sleep, health conditions, behaviours and environmental factors among influences on weight."}
+      ]
+    },
+    {
+      "id": "after-meal-walk",
+      "topic": "movement",
+      "label": "A short walk after a meal",
+      "claim": "A brief walk after a meal may reduce the blood-sugar rise for some people.",
+      "format": "multiple-choice",
+      "prompt": "What can a brief walk after a meal do for some people?",
+      "options": ["It may reduce the rise in blood sugar", "It guarantees a normal reading", "It replaces medical care"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "A brief walk after a meal may reduce the blood-sugar rise for some people. Evidence for exactly ten minutes is limited.",
+      "caveat": "A small trial studied a glucose drink; a review found post-meal exercise may help, with limits in the evidence.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Positive impact of a 10-min walk immediately after glucose intake on postprandial glucose levels","url":"https://www.nature.com/articles/s41598-025-07312-y","supports":"A small trial found lower glucose measures after a 10-minute walk following a glucose drink; the sample and setting limit generalization to meals."},
+        {"title":"After Dinner Rest a While, After Supper Walk a Mile? A Systematic Review with Meta-analysis on the Acute Postprandial Glycemic Response to Exercise","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC10036272/","supports":"A review of crossover trials found post-meal exercise reduced glucose excursions versus inactivity or pre-meal exercise, with limitations in the underlying evidence."}
+      ]
+    },
+    {
+      "id": "carbs-glucose",
+      "topic": "food",
+      "label": "Carbohydrates and blood sugar",
+      "claim": "Only sweets raise blood sugar?",
+      "format": "multiple-choice",
+      "prompt": "Which foods can raise blood sugar?",
+      "options": ["Only sweets", "Sweets and starchy foods such as rice, roti and potatoes", "Only fruit"],
+      "correctIndex": 1,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "Sweets aren’t the only foods that can raise blood sugar. Rice, roti, potatoes and grains can too; there’s no need to avoid them all.",
+      "caveat": "Foods and individual responses differ.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"CDC: Carb Counting","url":"https://www.cdc.gov/diabetes/healthy-eating/carb-counting-manage-blood-sugar.html","supports":"Explains that both sugars and starches raise blood sugar and identifies grains and potatoes as starchy foods."},
+        {"title":"American Diabetes Association: Understanding Carbs","url":"https://diabetes.org/food-nutrition/understanding-carbs","supports":"Explains that carbohydrate foods break down into glucose and includes rice, whole-wheat bread and starchy vegetables."}
+      ]
+    },
+    {
+      "id": "diabetes-only",
+      "topic": "body",
+      "label": "Before a diabetes diagnosis",
+      "claim": "Metabolic problems only affect people with diabetes?",
+      "format": "multiple-choice",
+      "prompt": "Can some metabolic risk factors be present before diabetes is diagnosed?",
+      "options": ["No, never", "Yes, some can be present before diagnosis", "Only after a person starts treatment"],
+      "correctIndex": 1,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "Prediabetes and other cardiometabolic risk factors can be present before diabetes is diagnosed. This is not a diagnosis of anyone’s health.",
+      "caveat": "Only a qualified clinician can assess an individual.",
+      "doubtTags": ["diabetes-only"],
+      "sources": [
+        {"title":"NIDDK: Insulin Resistance & Prediabetes","url":"https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance","supports":"Defines prediabetes as glucose above normal but below the diabetes threshold and describes insulin resistance and associated conditions."},
+        {"title":"ICMR-INDIAB-17: Metabolic non-communicable disease health report of India","url":"https://pubmed.ncbi.nlm.nih.gov/37301218/","supports":"Reports prediabetes as distinct from diabetes and separately measures cardiometabolic conditions including hypertension and dyslipidaemia in India."}
+      ]
+    },
+    {
+      "id": "sleep-appetite",
+      "topic": "sleep",
+      "label": "Sleep and appetite",
+      "claim": "Poor sleep can make you hungrier the next day.",
+      "format": "multiple-choice",
+      "prompt": "What might happen after a short night of sleep?",
+      "options": ["Some people may feel hungrier or eat more", "Everyone loses their appetite", "It always changes appetite hormones in the same way"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "A short night may leave some people feeling hungrier or eating more the next day. Effects vary.",
+      "caveat": "Studies vary, and not everyone notices a change.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"A Systematic Review and Meta-Analysis of Randomized Controlled Trials of the Impact of Sleep Duration on Adiposity and Components of Energy Balance","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4532553/","supports":"Reports increased hunger and food intake in several sleep-restriction experiments while noting study variation and inconsistent appetite-hormone findings."},
+        {"title":"A single night of moderate sleep restriction at-home increases hunger and food intake in overweight young adults","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC9991999/","supports":"A small study observed greater hunger and food intake after one night of moderate sleep restriction; the sample and design limit generalization."}
+      ]
+    },
+    {
+      "id": "muscle-loss",
+      "topic": "body",
+      "label": "Weight loss and muscle",
+      "claim": "Weight loss is only fat loss?",
+      "format": "multiple-choice",
+      "prompt": "Can weight loss include lean tissue as well as fat?",
+      "options": ["No, it is always only fat", "Yes, it can include lean tissue", "Only exercise causes any lean-tissue change"],
+      "correctIndex": 1,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "Weight loss can reduce fat and lean tissue. Resistance exercise and enough protein may help preserve muscle, but results vary.",
+      "caveat": "Protein needs and suitable exercise vary by person.",
+      "doubtTags": ["muscle-loss"],
+      "sources": [
+        {"title":"Preserving Healthy Muscle during Weight Loss","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC5421125/","supports":"Reviews evidence that diet-induced weight loss can reduce muscle mass and that protein and physical activity, especially resistance exercise, may help preserve it."},
+        {"title":"Effect of resistance exercise on body composition, muscle strength and cardiometabolic health during dietary weight loss","url":"https://bmjopensem.bmj.com/content/11/3/e002363","supports":"A systematic review and meta-analysis reports reductions in both fat and fat-free mass during dietary weight loss, with resistance exercise helping protect fat-free mass."}
+      ]
+    },
+    {
+      "id": "detox-drink",
+      "topic": "food",
+      "label": "Detox claims",
+      "claim": "A detox drink resets your metabolism?",
+      "format": "multiple-choice",
+      "prompt": "What has research shown about a special detox drink resetting metabolism?",
+      "options": ["It is proven to reset metabolism", "No special drink has been shown to detoxify the body or reset metabolism", "It works only when taken before breakfast"],
+      "correctIndex": 1,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "No specific drink has been shown to reset metabolism or detoxify your body.",
+      "caveat": "Some cleanses may carry risks; this is general education.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"British Dietetic Association: Detox Diets","url":"https://www.bda.uk.com/resource/detox-diets.html","supports":"Explains that the body continually processes and removes waste and that no specific drink has been shown to provide a special detox effect."},
+        {"title":"NCCIH: ‘Detoxes’ and ‘Cleanses’: What You Need To Know","url":"https://www.nccih.nih.gov/health/detoxes-and-cleanses-what-you-need-to-know","supports":"Reports no compelling research that detox diets remove toxins and notes that some cleanses can carry risks."}
+      ]
+    },
+    {
+      "id": "whole-fruit",
+      "topic": "food",
+      "label": "Whole fruit and juice",
+      "claim": "Fruit juice is the same as whole fruit?",
+      "format": "multiple-choice",
+      "prompt": "How is juice different from whole fruit?",
+      "options": ["Juice usually has less fibre and can be easier to drink in larger portions", "Juice always contains more fibre", "They are identical in every way"],
+      "correctIndex": 0,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "Juice usually has less fibre and is easier to drink in larger portions. Whole fruit remains a healthy choice.",
+      "caveat": "Juice can affect blood sugar differently; foods and portions vary.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"WHO: Healthy diet","url":"https://www.who.int/news-room/fact-sheets/detail/healthy-diet","supports":"Recommends fruit as a carbohydrate source and notes that most fruit juices contain significant free sugars; it also emphasizes dietary fibre."},
+        {"title":"NHS: 5 A Day: what counts?","url":"https://www.nhs.uk/live-well/eat-well/5-a-day/5-a-day-what-counts/","supports":"Distinguishes whole-fruit portions from a capped 150 ml daily portion of juice or smoothies, noting that juice is easy to consume in excess."}
+      ]
+    },
+    {
+      "id": "fasting",
+      "topic": "food",
+      "label": "Fasting and health",
+      "claim": "Intermittent fasting is necessary for metabolic health?",
+      "format": "multiple-choice",
+      "prompt": "Is intermittent fasting required for metabolic health?",
+      "options": ["Yes, everyone needs it", "No, it is one meal-timing approach, not a requirement", "Yes, unless someone eats fruit"],
+      "correctIndex": 1,
+      "verdict": "myth",
+      "mythFactAnswer": "myth",
+      "explanation": "Fasting is one way to time meals, not a requirement. Studies have not shown it superior to every other approach.",
+      "caveat": "Long-term evidence remains limited and responses differ.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Is isocaloric intermittent fasting superior to calorie restriction? A systematic review and meta-analysis of RCTs","url":"https://pubmed.ncbi.nlm.nih.gov/39732588/","supports":"A meta-analysis of 20 randomized trials concluded intermittent fasting may be an alternative to calorie restriction but was not superior overall; long-term evidence remains limited."},
+        {"title":"Intermittent Fasting and Metabolic Health","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC7419159/","supports":"Reviews possible benefits, comparable outcomes in some comparisons and heterogeneity in responses."}
+      ]
+    },
+    {
+      "id": "pairing",
+      "topic": "food",
+      "label": "Meal pairing and glucose response",
+      "claim": "Pairing carbohydrate foods with protein or fibre-rich foods can change how quickly glucose rises after a meal.",
+      "format": "multiple-choice",
+      "prompt": "With rice or roti, what can happen if the meal also includes dal, eggs or tofu, or fibre-rich vegetables?",
+      "options": ["The glucose rise may be slower or otherwise change", "The glucose rise always becomes faster", "The pairing never changes the glucose rise"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Carbohydrates raise glucose; protein- or fibre-containing foods can slow the rise. Pulse meals can also affect post-meal glucose (CDC; Hafiz et al.).",
+      "caveat": "The size and timing of any change vary with the foods, amounts, preparation and person; studies vary.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Diabetes Meal Planning","url":"https://www.cdc.gov/diabetes/healthy-eating/diabetes-meal-planning.html","supports":"The CDC says carbohydrate foods raise blood sugar and that eating them with protein-, fat- or fibre-containing foods slows how quickly it rises."},
+        {"title":"Pulse consumption improves indices of glycemic control in adults with and without type 2 diabetes: a systematic review and meta-analysis","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC8854292/","supports":"This review of randomized trials reports lower peak post-meal glucose after pulse intake, while noting inconsistent findings."}
+      ]
+    },
+    {
+      "id": "whole-grains",
+      "topic": "food",
+      "label": "Whole grains and refined grains",
+      "claim": "Many whole-grain foods provide more fibre than refined versions, and Indian guidance encourages including whole grains and millets in a varied diet.",
+      "format": "multiple-choice",
+      "prompt": "Which statement best matches general dietary guidance?",
+      "options": ["Many whole-grain foods provide more fibre than refined versions; Indian guidance encourages whole grains and millets", "Refined grains generally provide more fibre; guidance encourages choosing refined grains", "Whole- and refined-grain foods generally provide the same fibre"],
+      "correctIndex": 0,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "Wholegrain choices such as brown rice and wholemeal bread are fibre sources; Indian guidance encourages whole grains and millets (NHS; ICMR-NIN).",
+      "caveat": "Fibre varies by grain, recipe and processing; this is a general pattern, not an individual glucose response.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Dietary Guidelines for Indians","url":"https://nin.res.in/downloads/DGI_Booklet_English_CMYK.pdf","supports":"ICMR-NIN recommends combining whole grains, cereals, pulses and millets, and preferring whole grains and millets to refined grains."},
+        {"title":"Starchy foods and carbohydrates","url":"https://www.nhs.uk/live-well/eat-well/food-types/starchy-foods-and-carbohydrates/","supports":"The NHS says wholegrain varieties are good sources of fibre and that white bread has less fibre than wholegrain, wholemeal or brown bread."}
+      ]
+    },
+    {
+      "id": "ghee",
+      "topic": "food",
+      "label": "Ghee and saturated fat",
+      "claim": "Ghee is a source of saturated fat; WHO frames its guidance as a limit on saturated fat across the whole diet, not a ban on one food.",
+      "format": "multiple-choice",
+      "prompt": "Which statement best matches guidance on ghee and saturated fat?",
+      "options": ["Ghee contains saturated fat, and guidance considers saturated fat across the whole diet", "Ghee has no saturated fat", "WHO says everyone must avoid ghee completely"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Ghee is a source of saturated fat; WHO sets a limit for saturated fat across the diet, not a ban on ghee (WHO).",
+      "caveat": "Ghee content and portions vary. The WHO limit is diet-wide, not a ghee-specific serving target.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"WHO updates guidelines on fats and carbohydrates","url":"https://www.who.int/news/item/17-07-2023-who-updates-guidelines-on-fats-and-carbohydrates","supports":"WHO says saturated fat should provide no more than 10% of total energy for people aged 2 and older and identifies ghee among sources of saturated fat."},
+        {"title":"Dietary Guidelines for Indians","url":"https://www.nin.res.in/downloads/DietaryGuidelinesforNINwebsite.pdf","supports":"The ICMR-NIN guidelines identify ghee as a source of saturated fatty acids and advise limiting saturated-fat intake in adults."}
+      ]
+    },
+    {
+      "id": "oil-portion",
+      "topic": "food",
+      "label": "Cooking oils and energy density",
+      "claim": "Cooking oils are energy-dense, so guidance recommends using them in moderation—not avoiding all oils.",
+      "format": "multiple-choice",
+      "prompt": "Which statement best matches dietary guidance about cooking oils?",
+      "options": ["Use oils in moderation; unsaturated oils are generally preferred", "Avoid every cooking oil because all oils are unhealthy", "Use oils freely because plant oils provide little energy"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Oils are energy-dense, but fats are essential; guidance favors unsaturated oils and moderation rather than avoiding every oil (ICMR-NIN; WHO).",
+      "caveat": "Suitable amounts vary with energy needs, activity, life stage and the overall diet.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Dietary Guidelines for Indians 2024","url":"https://nin.res.in/dietaryguidelines/pdfjs/locale/DGI_2024.pdf","supports":"The ICMR-NIN guideline says visible cooking fats can be limited according to energy needs, while adequate good-quality fats are needed."},
+        {"title":"Healthy diet","url":"https://www.who.int/news-room/fact-sheets/detail/healthy-diet","supports":"WHO says fat is essential, identifies unsaturated oils as preferable to saturated fats, and describes moderation as a core principle of healthy diets."}
+      ]
+    },
+    {
+      "id": "tea-iron",
+      "topic": "food",
+      "label": "Tea with meals and iron absorption",
+      "claim": "Tea consumed with a meal can reduce absorption of non-haem iron, especially iron from plant foods.",
+      "format": "multiple-choice",
+      "prompt": "What can happen when tea is consumed with a meal containing iron from plant foods?",
+      "options": ["It can reduce absorption of non-haem iron", "It always increases non-haem iron absorption", "It has no effect on absorption"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Tea with a rice meal reduced non-haem iron absorption in a study of young Indian women; effects can vary (ICMR-NIN; Thankachan et al.).",
+      "caveat": "The study measured short-term absorption from one meal in small groups; it does not predict long-term iron status for everyone.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Dietary Guidelines for Indians 2024","url":"https://nin.res.in/dietaryguidelines/pdfjs/locale/DGI_2024.pdf","supports":"ICMR-NIN guidance says tea can bind dietary iron and advises avoiding tea before, during or soon after meals."},
+        {"title":"Iron absorption in young Indian women: the interaction of iron status with the influence of tea and ascorbic acid","url":"https://pubmed.ncbi.nlm.nih.gov/18400710/","supports":"In stable-isotope meal studies among young Indian women, black tea consumed with a rice meal decreased measured iron absorption."}
+      ]
+    },
+    {
+      "id": "plant-protein",
+      "topic": "food",
+      "label": "Plant protein variety",
+      "claim": "General guidance supports varied protein choices, including pulses and beans, soy foods, and dairy or eggs when included; no single food is mandatory.",
+      "format": "multiple-choice",
+      "prompt": "Which statement best matches general guidance on protein choices?",
+      "options": ["Vary protein foods: include pulses or beans and soy, with dairy or eggs if they fit your diet", "Every vegetarian must eat eggs or dairy", "One protein food is required for everyone"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Guidance names pulses, beans, soy, dairy and eggs among possible choices and encourages variety; no one food suits every diet (NHS; ICMR-NIN).",
+      "caveat": "Food needs vary with age, life stage and the overall diet; vegetarian diets need planning for nutrients beyond protein.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Dietary Guidelines for Indians: A Booklet","url":"https://www.nin.res.in/downloads/DGI_Booklet_English_CMYK.pdf","supports":"ICMR-NIN says vegetarians can meet protein needs with pulses, beans, peas and milk or curd, and recommends combining cereals with pulses."},
+        {"title":"The vegetarian diet","url":"https://www.nhs.uk/live-well/eat-well/how-to-eat-a-balanced-diet/the-vegetarian-diet/","supports":"NHS lists pulses, eggs, tofu and other meat alternatives as protein sources and recommends variety."}
+      ]
+    },
+    {
+      "id": "protein-needs",
+      "topic": "body",
+      "label": "Individual protein needs",
+      "claim": "One protein target does not fit everyone: needs can vary with age, health and life stage.",
+      "format": "multiple-choice",
+      "prompt": "Which statement is best?",
+      "options": ["Everyone needs the same protein amount", "Protein needs can differ by age and health", "Only activity level changes protein needs"],
+      "correctIndex": 1,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "ICMR-NIN gives healthy adults a reference value and notes needs vary with age and physiological status.",
+      "caveat": "A population reference is not a personal target; illness, life stage and individual circumstances can change needs.",
+      "doubtTags": ["for-me"],
+      "sources": [
+        {"title":"Dietary Guidelines for Indians 2024","url":"https://www.nin.res.in/dietaryguidelines/pdfjs/locale/DGI_2024.pdf","supports":"ICMR-NIN states protein needs vary with age, physiological status and stress, including infections, illness and physical stress."},
+        {"title":"A Brief Note on Nutrient Requirements for Indians, the Recommended Dietary Allowances and Estimated Average Requirements (2020)","url":"https://www.nin.res.in/rdabook/brief_note.pdf","supports":"ICMR-NIN sets a reference for healthy Indian adults and lists differing recommendations for age groups, pregnancy and lactation."}
+      ]
+    },
+    {
+      "id": "strength-training",
+      "topic": "movement",
+      "label": "Strength exercise and muscle",
+      "claim": "Adult guidance recommends muscle-strengthening activity for major muscle groups on 2 or more days a week; resistance training can improve strength, but does not guarantee prevention of all muscle loss.",
+      "format": "multiple-choice",
+      "prompt": "Which statement best matches adult guidance and the evidence on strength?",
+      "options": ["Strengthen major muscle groups on 2 or more days; this can help strength but cannot promise to prevent all muscle loss", "Strengthen major muscle groups once weekly; this is the adult guideline target", "Strengthen every day; this guarantees muscle loss will not happen"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "WHO recommends strengthening major muscle groups on 2 or more days weekly; resistance training can improve strength, but results vary (WHO).",
+      "caveat": "This is general adult guidance, not a guarantee; exercise suitability varies by person.",
+      "doubtTags": ["muscle-loss"],
+      "sources": [
+        {"title":"Physical activity","url":"https://www.who.int/initiatives/behealthy/physical-activity","supports":"WHO recommends adults do muscle-strengthening activities involving major muscle groups on 2 or more days a week."},
+        {"title":"Resistance training prescription for muscle strength and hypertrophy in healthy adults: a systematic review and Bayesian network meta-analysis","url":"https://bjsm.bmj.com/content/57/18/1211","supports":"This review of trials in healthy adults found resistance-training prescriptions improved muscle strength compared with no exercise, with limitations in some comparisons."}
+      ]
+    },
+    {
+      "id": "sitting-breaks",
+      "topic": "movement",
+      "label": "Breaking up sitting",
+      "claim": "For adults, replacing some sedentary time with physical activity—even light activity—is supported; no universal break schedule is established.",
+      "format": "multiple-choice",
+      "prompt": "What do guidelines support for adults who spend a lot of time sitting?",
+      "options": ["Replace some sitting with activity of any intensity, including light movement", "Take a break every 30 minutes; that timing is proven for everyone", "Replace sitting only with vigorous activity"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "WHO recommends limiting sedentary time and replacing it with activity of any intensity, including light activity; it does not set a universal break schedule.",
+      "caveat": "Guidelines do not establish one break interval for everyone.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"WHO guidelines on physical activity and sedentary behaviour","url":"https://iris.who.int/server/api/core/bitstreams/faa83413-d89e-4be9-bb01-b24671aef7ca/content","supports":"WHO recommends that adults limit sedentary time and replace it with physical activity of any intensity, including light activity."},
+        {"title":"World Health Organization 2020 guidelines on physical activity and sedentary behaviour: a systematic review and meta-analysis","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC7719906/","supports":"This guideline summary reports insufficient evidence to quantify a universal frequency or duration for sedentary breaks."}
+      ]
+    },
+    {
+      "id": "activity-guideline",
+      "topic": "movement",
+      "label": "Adult movement guidance",
+      "claim": "WHO recommends adults do 150–300 minutes of moderate-intensity aerobic activity each week and muscle-strengthening activity on 2 or more days each week.",
+      "format": "multiple-choice",
+      "prompt": "Which weekly activity target matches WHO guidance for adults?",
+      "options": ["150–300 minutes moderate aerobic activity, plus strength work on 2 or more days", "75 minutes moderate aerobic activity, plus strength work once a week", "300 minutes moderate aerobic activity every day, with no strength work"],
+      "correctIndex": 0,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "WHO recommends 150–300 moderate minutes weekly plus strength work on 2+ days; this is guidance, not a guarantee of an outcome.",
+      "caveat": "Benefits vary; meeting a target does not guarantee a specific metabolic or health outcome.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"WHO Guidelines on Physical Activity and Sedentary Behaviour: Recommendations","url":"https://www.ncbi.nlm.nih.gov/books/NBK566046/","supports":"The adult recommendation specifies 150–300 weekly minutes of moderate-intensity aerobic activity and strengthening involving all major muscle groups on 2 or more days weekly."},
+        {"title":"Physical activity","url":"https://www.who.int/initiatives/behealthy/physical-activity","supports":"WHO's official guidance page describes weekly moderate activity and strengthening on 2 or more days."}
+      ]
+    },
+    {
+      "id": "south-asian-risk",
+      "topic": "body",
+      "label": "South Asian risk patterns",
+      "claim": "South Asian populations can have increased cardiometabolic risk at lower BMI than standard cutoffs suggest, but BMI alone does not determine an individual’s health.",
+      "format": "multiple-choice",
+      "prompt": "Which statement is best supported?",
+      "options": ["South Asian groups may have higher risk at lower BMI on average, but BMI alone cannot determine an individual’s health", "A standard-range BMI rules out higher risk for South Asians", "Every South Asian person has the same risk at one fixed BMI"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "South Asian groups can face higher diabetes and heart-disease risk at lower BMI on average; BMI alone is not a personal diagnosis.",
+      "caveat": "These are population patterns, not a prediction for every person; risk varies and evidence does not support one universal cutoff.",
+      "doubtTags": ["for-me"],
+      "sources": [
+        {"title":"South Asian American Perspectives on Overweight, Obesity, and the Relationship Between Weight and Health","url":"https://www.cdc.gov/pcd/issues/2012/11_0284.htm","supports":"This CDC-published article reports that South Asian adults can develop type 2 diabetes and cardiovascular disease at lower BMI than some other groups."},
+        {"title":"Obesity and Cardiovascular Risk among South Asian Americans","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC10063226/","supports":"This review says South Asian cardiovascular and metabolic risks can be increased at BMI levels considered normal, while noting limitations in defining cutoffs."}
+      ]
+    },
+    {
+      "id": "waist-risk",
+      "topic": "body",
+      "label": "Waist and risk",
+      "claim": "A larger waist can be associated with higher cardiometabolic risk, but waist size alone does not determine an individual’s health.",
+      "format": "multiple-choice",
+      "prompt": "What can waist size tell us about cardiometabolic risk?",
+      "options": ["It tells someone's risk exactly on its own", "It can be one clue linked with higher risk, but it is not a diagnosis", "It has no link with cardiometabolic risk"],
+      "correctIndex": 1,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Waist circumference can signal higher risk of heart disease and type 2 diabetes, but it cannot diagnose a person by itself.",
+      "caveat": "Risk patterns vary; waist is one marker, not a complete health assessment.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Aim for a Healthy Weight — National Heart, Lung, and Blood Institute","url":"https://www.nhlbi.nih.gov/health/heart-healthy-living/healthy-weight","supports":"The NHLBI says fat carried around the waist is linked with higher risk of heart disease and type 2 diabetes."},
+        {"title":"Waist circumference and cardiometabolic risk: a consensus statement from Shaping America’s Health","url":"https://pubmed.ncbi.nlm.nih.gov/17490953/","supports":"This consensus statement reports that waist circumference relates to diabetes and coronary heart disease risk, while noting uncertainty about added predictive value."}
+      ]
+    },
+    {
+      "id": "sleep-hours",
+      "topic": "sleep",
+      "label": "Adult sleep duration",
+      "claim": "For adults aged 18–60, consensus guidance recommends 7 or more hours of sleep regularly to support health, while individual sleep needs can vary.",
+      "format": "multiple-choice",
+      "prompt": "For adults aged 18–60, which statement best matches sleep guidance?",
+      "options": ["Regularly aim for 7 or more hours; individual needs can vary", "Regularly aim for fewer than 6 hours; needs are the same", "Regularly aim for exactly 9 hours; needs do not vary"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "AASM/SRS recommend 7 or more hours regularly for adults aged 18–60 to promote health, while noting sleep needs vary.",
+      "caveat": "This is general guidance, not an exact target or guarantee for each person.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"About Sleep","url":"https://www.cdc.gov/sleep/about/index.html","supports":"Lists 7 or more hours daily for adults aged 18–60 and says enough sleep supports health."},
+        {"title":"Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4434546/","supports":"Recommends adults aged 18–60 sleep 7 or more hours regularly to promote health and notes individual variability in sleep need."}
+      ]
+    },
+    {
+      "id": "sleep-routine",
+      "topic": "sleep",
+      "label": "Sleep and general health",
+      "claim": "Enough, good-quality sleep on a regular schedule supports general health.",
+      "format": "multiple-choice",
+      "prompt": "Which statement is best supported by health guidance?",
+      "options": ["Enough, good-quality sleep on a regular schedule supports general health", "Sleep matters only when someone wants to lose weight", "A single short night always causes lasting health problems"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Sleep is important for health and well-being; enough sleep, quality and a steady schedule are all parts of healthy sleep (CDC; NIH).",
+      "caveat": "Sleep needs vary. Guidance does not treat sleep as a weight-loss treatment or guarantee.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"About Sleep","url":"https://www.cdc.gov/sleep/about/index.html","supports":"CDC says good sleep is essential for health and emotional well-being, and recommends a regular bedtime and wake time."},
+        {"title":"Good Sleep for Good Health","url":"https://newsinhealth.nih.gov/2021/04/good-sleep-good-health","supports":"NIH describes sleep as important for good health and identifies sleep amount, quality and a consistent schedule as parts of healthy sleep."}
+      ]
+    },
+    {
+      "id": "sugar-drinks",
+      "topic": "food",
+      "label": "Added sugars and drinks",
+      "claim": "Indian NIN guidance says to avoid foods and drinks with added sugars; WHO identifies free sugars as a key risk factor for tooth decay.",
+      "format": "multiple-choice",
+      "prompt": "Which statement best matches Indian and WHO guidance?",
+      "options": ["Avoid foods and drinks with added sugars; free sugars are a tooth-decay risk factor", "Sweetened drinks are recommended as a regular source of free sugars", "Only sugar added at home counts as free sugar"],
+      "correctIndex": 0,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "India’s NIN advises avoiding foods and drinks with added sugars; WHO identifies free sugars as a tooth-decay risk (ICMR-NIN; WHO).",
+      "caveat": "This is general guidance, not a personal restriction or an individual health assessment.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Dietary Guidelines for Indians 2024","url":"https://nin.res.in/dietaryguidelines/pdfjs/locale/DGI_2024.pdf","supports":"The Indian NIN guideline advises avoiding foods and beverages with added sugars."},
+        {"title":"Sugars and dental caries","url":"https://www.who.int/news-room/fact-sheets/detail/sugars-and-dental-caries","supports":"WHO identifies free sugars in foods and beverages as a major tooth-decay risk factor."}
+      ]
+    },
+    {
+      "id": "food-fibre",
+      "topic": "food",
+      "label": "Dietary fibre sources",
+      "claim": "Vegetables, fruit, pulses and whole grains are commonly named sources of dietary fibre.",
+      "format": "multiple-choice",
+      "prompt": "Which group includes common sources of dietary fibre?",
+      "options": ["Vegetables, fruit, pulses and whole grains", "Milk, eggs, fish and meat", "Oils, butter, sugar and sweet drinks"],
+      "correctIndex": 0,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "Official guidance names vegetables, fruit, pulses and whole grains among fibre-containing foods; amounts vary across foods (ICMR-NIN; WHO).",
+      "caveat": "This identifies sources, not a personal intake target; recommendations vary by age and guidance.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"Dietary Guidelines for Indians","url":"https://nin.res.in/dietaryguidelines/pdfjs/locale/DGI_2024.pdf","supports":"The ICMR-NIN guideline describes fibre in vegetables, fruits, whole grains and pulses."},
+        {"title":"Healthy diet","url":"https://www.who.int/news-room/fact-sheets/detail/healthy-diet","supports":"WHO identifies whole grains, vegetables, fruit and pulses as carbohydrate sources and mentions naturally occurring fibre."}
+      ]
+    },
+    {
+      "id": "health-not-scale",
+      "topic": "body",
+      "label": "More than one number",
+      "claim": "A scale number alone does not give a full picture of metabolic health.",
+      "format": "multiple-choice",
+      "prompt": "Which statement best matches health guidance?",
+      "options": ["One scale number gives the full picture", "A fuller picture uses several measures, such as waist, blood pressure and blood tests", "How someone feels is the only measure"],
+      "correctIndex": 1,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "Guidance considers several measures, including waist, blood pressure and blood tests; BMI is a screening measure, not the whole picture (NHS; CDC).",
+      "caveat": "This is general education, not an assessment. Guidance does not mean everyone needs every test.",
+      "doubtTags": ["for-me"],
+      "sources": [
+        {"title":"Metabolic syndrome — NHS","url":"https://www.nhs.uk/conditions/metabolic-syndrome/","supports":"The NHS describes metabolic syndrome as a group of health problems and lists checks including BMI, waist, blood pressure, blood glucose and blood fats."},
+        {"title":"About Body Mass Index (BMI) — CDC","url":"https://www.cdc.gov/bmi/about/index.html","supports":"The CDC says BMI is a screening measure and should be considered with other factors, including blood pressure, cholesterol, glucose and medical history."}
+      ]
+    },
+    {
+      "id": "habit-regain",
+      "topic": "body",
+      "label": "Weight maintenance and support",
+      "claim": "Maintaining weight loss can be challenging; ongoing habits and support may help, but regain is not inevitable.",
+      "format": "multiple-choice",
+      "prompt": "After losing weight, which statement is best supported?",
+      "options": ["Keeping it off can be challenging; habits and support may help, and experiences differ", "Everyone regains weight, whatever support they have", "Once weight is lost, it stays off without ongoing habits"],
+      "correctIndex": 0,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Maintaining weight can be challenging; habits and support may help, but outcomes differ and regain is not certain (CDC; BMJ).",
+      "caveat": "Evidence is limited beyond two years and much of the research is from the US and Scandinavia.",
+      "doubtTags": ["regain"],
+      "sources": [
+        {"title":"Tips for Keeping Weight Off","url":"https://www.cdc.gov/healthy-weight-growth/losing-weight/keeping-it-off.html","supports":"CDC says maintaining habits after weight loss can be challenging and describes ongoing eating patterns, activity, monitoring and support among people who maintain weight loss."},
+        {"title":"Long term maintenance of weight loss with non-surgical interventions in obese adults: systematic review and meta-analyses of randomised controlled trials","url":"https://www.bmj.com/content/348/bmj.g2646","supports":"This review found comprehensive behavioural interventions moderately slowed regain through up to 24 months, with limited evidence beyond that period."}
+      ]
+    },
+    {
+      "id": "shared-decision",
+      "topic": "body",
+      "label": "Safety and shared decisions",
+      "claim": "A health decision can consider evidence and the person’s individual needs, values and preferences.",
+      "format": "multiple-choice",
+      "prompt": "When asking whether a health approach is safe and right for you, what is most useful?",
+      "options": ["Discuss the evidence, possible benefits and harms, and your situation with a qualified clinician", "Use the same answer for everyone", "Decide from one online quiz"],
+      "correctIndex": 0,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "NICE describes shared decisions as weighing evidence with a person’s needs, preferences and values, including discussion of risks and benefits.",
+      "caveat": "This game cannot assess personal safety or replace a conversation with a clinician.",
+      "doubtTags": ["safe", "for-me"],
+      "sources": [
+        {"title":"Shared decision making — NICE guideline NG197","url":"https://www.nice.org.uk/guidance/ng197","supports":"NICE recommends healthcare professionals and people using services work together on treatment and care decisions, including communicating risks and benefits."},
+        {"title":"About shared decision making — NICE","url":"https://www.nice.org.uk/what-nice-does/our-guidance/about-nice-guidelines/about-shared-decision-making","supports":"NICE says treatment choices should be based on evidence and the person’s individual preferences, beliefs and values."}
+      ]
+    },
+    {
+      "id": "safe-beyond-diabetes",
+      "topic": "body",
+      "label": "Safety beyond diabetes",
+      "claim": "Not having diabetes does not establish that a health approach is safe for you.",
+      "format": "multiple-choice",
+      "prompt": "Does not having diabetes by itself tell you whether a health approach is safe for you?",
+      "options": ["Yes; diabetes is the only factor that matters", "No; safety depends on your situation, and some risks can exist before diagnosis", "Yes; a quiz can confirm it"],
+      "correctIndex": 1,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "Safety depends on your health context; some metabolic risks can exist before diabetes is diagnosed. A quiz cannot assess personal safety.",
+      "caveat": "This is general education, not an eligibility test or diagnosis.",
+      "doubtTags": ["safe", "diabetes-only"],
+      "sources": [
+        {"title":"Shared decision making — NICE guideline NG197","url":"https://www.nice.org.uk/guidance/ng197","supports":"NICE recommends discussing treatment and care options in light of individual needs and circumstances."},
+        {"title":"NIDDK: Insulin Resistance & Prediabetes","url":"https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance","supports":"Prediabetes is a glucose risk state distinct from a diabetes diagnosis; this does not determine anyone’s individual health."}
+      ]
+    },
+    {
+      "id": "safe-assessment",
+      "topic": "body",
+      "label": "No one-size-fits-all safety answer",
+      "claim": "A quiz cannot establish that a health approach is safe for every person.",
+      "format": "multiple-choice",
+      "prompt": "Can one quiz tell you whether a health approach is safe for everyone?",
+      "options": ["Yes, the same answer fits every person", "No; discuss options and your circumstances with a clinician", "Yes, if the quiz gives a high score"],
+      "correctIndex": 1,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "NICE recommends shared decisions that consider evidence alongside the individual’s needs and preferences; a quiz cannot assess those for you.",
+      "caveat": "This is a boundary of the game, not a judgment about any particular treatment.",
+      "doubtTags": ["safe"],
+      "sources": [
+        {"title":"Shared decision making — NICE guideline NG197","url":"https://www.nice.org.uk/guidance/ng197","supports":"NICE says decisions about treatment and care should be made together in light of individual needs and circumstances."},
+        {"title":"About shared decision making — NICE","url":"https://www.nice.org.uk/what-nice-does/our-guidance/about-nice-guidelines/about-shared-decision-making","supports":"NICE says treatment choices should account for personal preferences and involve discussing risks, benefits and possible outcomes."}
+      ]
+    },
+    {
+      "id": "prediabetes-before-diagnosis",
+      "topic": "body",
+      "label": "Before a diabetes diagnosis",
+      "claim": "Some glucose and cardiometabolic risk factors can exist before a person is diagnosed with diabetes.",
+      "format": "multiple-choice",
+      "prompt": "Can a person have a glucose risk state before a diabetes diagnosis?",
+      "options": ["Yes; prediabetes is distinct from diabetes", "No; there is no state before diabetes", "Only after someone starts treatment"],
+      "correctIndex": 0,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "NIDDK describes prediabetes as glucose above normal but below the diabetes threshold; it is not itself a diabetes diagnosis.",
+      "caveat": "Only a qualified clinician can interpret an individual’s tests and health history.",
+      "doubtTags": ["diabetes-only"],
+      "sources": [
+        {"title":"NIDDK: Insulin Resistance & Prediabetes","url":"https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/prediabetes-insulin-resistance","supports":"Defines prediabetes as glucose above normal but below the diabetes threshold and describes it as distinct from diabetes."},
+        {"title":"ICMR-INDIAB-17: Metabolic non-communicable disease health report of India","url":"https://pubmed.ncbi.nlm.nih.gov/37301218/","supports":"Reports prediabetes separately from diabetes and measures other cardiometabolic conditions in India."}
+      ]
+    },
+    {
+      "id": "regain-not-inevitable",
+      "topic": "body",
+      "label": "Weight returning is not inevitable",
+      "claim": "Weight regain can happen, but it is not inevitable and is not a personal failure.",
+      "format": "multiple-choice",
+      "prompt": "Does everyone regain weight after losing it?",
+      "options": ["Yes, it always happens", "No; maintenance can be challenging, but experiences differ", "No; weight never returns once lost"],
+      "correctIndex": 1,
+      "verdict": "qualified",
+      "mythFactAnswer": "fact",
+      "explanation": "Maintaining weight can be difficult for some, but outcomes differ; ongoing habits and support may help (CDC; BMJ).",
+      "caveat": "No approach guarantees a particular long-term result.",
+      "doubtTags": ["regain", "for-me"],
+      "sources": [
+        {"title":"Tips for Keeping Weight Off","url":"https://www.cdc.gov/healthy-weight-growth/losing-weight/keeping-it-off.html","supports":"CDC says maintenance is challenging but describes people who maintain weight loss with continued habits and support."},
+        {"title":"Long term maintenance of weight loss with non-surgical interventions in obese adults: systematic review and meta-analyses of randomised controlled trials","url":"https://www.bmj.com/content/348/bmj.g2646","supports":"The review found that comprehensive behavioral support can slow regain in trials through up to 24 months, with uncertainty beyond that."}
+      ]
+    },
+    {
+      "id": "starch-not-only-sweets",
+      "topic": "food",
+      "label": "Starches count too",
+      "claim": "Starchy foods such as rice, roti and potatoes can raise blood sugar too.",
+      "format": "multiple-choice",
+      "prompt": "Which kinds of foods can raise blood sugar?",
+      "options": ["Only sweet foods", "Sugars and starches, including rice, roti and potatoes", "Only foods that taste sweet"],
+      "correctIndex": 1,
+      "verdict": "fact",
+      "mythFactAnswer": "fact",
+      "explanation": "Both sugars and starches can raise blood sugar; rice, grains and potatoes are examples of starchy foods (CDC; ADA).",
+      "caveat": "This is not a reason to avoid all carbohydrate foods; foods and individual responses differ.",
+      "doubtTags": [],
+      "sources": [
+        {"title":"CDC: Carb Counting","url":"https://www.cdc.gov/diabetes/healthy-eating/carb-counting-manage-blood-sugar.html","supports":"Explains that both sugars and starches raise blood sugar and identifies grains and potatoes as starchy foods."},
+        {"title":"American Diabetes Association: Understanding Carbs","url":"https://diabetes.org/food-nutrition/understanding-carbs","supports":"Explains that carbohydrate foods break down into glucose and includes rice and starchy vegetables."}
+      ]
+    }
+  ]
+}
