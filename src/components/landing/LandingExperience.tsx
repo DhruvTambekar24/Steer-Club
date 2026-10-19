@@ -2,11 +2,15 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { QRCodeSVG } from "qrcode.react";
+import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { mythCards } from "@/content/myths";
 import GuessDial from "@/components/landing/GuessDial";
 import MetabolismStory from "@/components/landing/MetabolismStory";
 import MythWall from "@/components/landing/MythWall";
+import BrandMark from "@/components/BrandMark";
+import { captureUtm, trackEvent } from "@/lib/analytics";
+import { getSessionId } from "@/lib/game";
 
 type DoubtId = "safe" | "muscle-loss" | "regain" | "diabetes-only" | "for-me";
 type ModeId = "quick-quiz" | "myth-fact";
@@ -25,9 +29,11 @@ const modes: { id: ModeId; title: string; note: string; mark: string }[] = [
 ];
 
 export default function LandingExperience() {
+  const router = useRouter();
   const reduceMotion = useReducedMotion();
   const heroRef = useRef<HTMLElement>(null);
   const revealRef = useRef<HTMLElement>(null);
+  const sentDepthRef = useRef(new Set<number>());
   const [guess, setGuess] = useState(50);
   const [locked, setLocked] = useState(false);
   const [selectedDoubt, setSelectedDoubt] = useState<DoubtId | null>(null);
@@ -35,8 +41,12 @@ export default function LandingExperience() {
   const [notice, setNotice] = useState("");
   const [bottomCtaVisible, setBottomCtaVisible] = useState(false);
   const [pageUrl, setPageUrl] = useState("");
+  const [streak, setStreak] = useState(0);
+  const [returning, setReturning] = useState(false);
 
   useEffect(() => {
+    captureUtm();
+    trackEvent("hero_view");
     setPageUrl(window.location.href);
     try {
       const savedDoubt = window.localStorage.getItem("steerclub:doubt");
@@ -49,20 +59,44 @@ export default function LandingExperience() {
         if (Number.isFinite(savedGuess) && savedGuess >= 0 && savedGuess <= 100) setGuess(savedGuess);
       }
 
-      let sessionId = window.localStorage.getItem("steerclub:anonymous-session");
-      if (!sessionId && window.crypto?.randomUUID) {
-        sessionId = window.crypto.randomUUID();
-        window.localStorage.setItem("steerclub:anonymous-session", sessionId);
-      }
-      if (sessionId) {
-        const isHttps = window.location.protocol === "https:";
-        const secure = isHttps ? "; Secure" : "";
-        const sameSite = isHttps ? "None" : "Lax";
-        document.cookie = `sc_session=${encodeURIComponent(sessionId)}; Max-Age=31536000; Path=/; SameSite=${sameSite}${secure}`;
-      }
+      const sessionId = getSessionId();
+      void fetch(`/api/session?id=${encodeURIComponent(sessionId)}`, { cache: "no-store" })
+        .then((response) => response.ok ? response.json() : null)
+        .then((payload) => {
+          if (!payload) return;
+          if (typeof payload.streak === "number") setStreak(payload.streak);
+          if (payload.returning === true) {
+            setReturning(true);
+            if (window.localStorage.getItem("steerclub:doubt")) setLocked(true);
+          }
+        })
+        .catch(() => undefined);
     } catch {
       // Private browsing can block local storage; the page remains fully usable without it.
     }
+  }, []);
+
+  useEffect(() => {
+    if (!returning || !locked) return;
+    const frame = window.requestAnimationFrame(() => revealRef.current?.scrollIntoView({ behavior: "auto", block: "start" }));
+    return () => window.cancelAnimationFrame(frame);
+  }, [returning, locked]);
+
+  useEffect(() => {
+    function recordDepth() {
+      const page = document.documentElement;
+      const maximum = page.scrollHeight - window.innerHeight;
+      if (maximum <= 0) return;
+      const depth = Math.min(100, Math.floor((window.scrollY / maximum) * 100 / 25) * 25);
+      for (const milestone of [25, 50, 75, 100]) {
+        if (depth >= milestone && !sentDepthRef.current.has(milestone)) {
+          sentDepthRef.current.add(milestone);
+          trackEvent("scroll_depth", { depth: milestone });
+        }
+      }
+    }
+    window.addEventListener("scroll", recordDepth, { passive: true });
+    return () => window.removeEventListener("scroll", recordDepth);
   }, []);
 
   useEffect(() => {
@@ -84,6 +118,7 @@ export default function LandingExperience() {
   function lockGuess() {
     if (locked) return;
     setLocked(true);
+    trackEvent("dial_locked", { guess });
     try {
       window.localStorage.setItem("steerclub:guess", String(guess));
     } catch {
@@ -98,6 +133,7 @@ export default function LandingExperience() {
     setSelectedDoubt(id);
     setSelectedMode(null);
     setNotice("Saved on this device. Two questions in your round will speak to this doubt.");
+    trackEvent("doubt_tapped", { doubt: id });
     try {
       window.localStorage.setItem("steerclub:doubt", id);
     } catch {
@@ -107,7 +143,13 @@ export default function LandingExperience() {
 
   function chooseMode(id: ModeId) {
     setSelectedMode(id);
-    setNotice("Your doubt is saved. The seven-question round will open here next.");
+    trackEvent("mode_selected", { mode: id });
+    if (!selectedDoubt) {
+      setNotice("Choose one doubt first so the round can keep it in mind.");
+      return;
+    }
+    setNotice("Your doubt is saved. Opening your seven-question round.");
+    router.push(`/play?mode=${id}`);
   }
 
   const currentDoubt = doubts.find((item) => item.id === selectedDoubt);
@@ -119,16 +161,16 @@ export default function LandingExperience() {
         <div className="experience-column">
           <header className="site-header">
             <a className="wordmark" href="#top" aria-label="Steer Club, back to the beginning">
-              <span>steer</span><span className="club">club</span>
+              <BrandMark className="landing-brand-mark" />
             </a>
-            <span className="streak-pill" aria-label="Your streak starts at zero">
-              <span className="streak-mark" aria-hidden="true" /> 0-day streak
+            <span className="streak-pill" aria-label={`Your current streak is ${streak} days`}>
+              <span className="streak-mark" aria-hidden="true" /> {streak}-day streak
             </span>
           </header>
 
           <main id="top">
             <section ref={heroRef} className="hero" id="hero" aria-labelledby="hero-title">
-              <p className="hero-kicker"><span className="kicker-rule" /> a small question, before the day gets loud</p>
+              <p className="hero-kicker"><span className="kicker-rule" /> {returning ? `welcome back${streak ? `, day ${streak}` : ""} · your thread is still here` : "a small question, before the day gets loud"}</p>
               <h1 id="hero-title">How much of your metabolic health is <em>actually in your control?</em></h1>
               <GuessDial value={guess} onChange={setGuess} locked={locked} />
               <button className="primary-button" type="button" onClick={lockGuess} disabled={locked} aria-pressed={locked}>
@@ -200,8 +242,8 @@ export default function LandingExperience() {
                       </button>
                     ))}
                   </div>
-                  {selectedMode && <p className="round-note" aria-live="polite">The round is the next part of the experience. Your doubt is saved in this browser.</p>}
-                  <span className="daily-chip"><strong>Today’s note</strong> · 0-day streak · no sign-up</span>
+                  {selectedMode && <p className="round-note" aria-live="polite">Your round is opening. Your doubt is saved in this browser.</p>}
+                  <a className="daily-chip" href="/play?mode=daily"><strong>Today’s note</strong> · 5 questions · no sign-up <span aria-hidden="true">→</span></a>
                   <span className="status-live" role="status" aria-live="polite">{notice}</span>
                 </motion.section>
               )}
@@ -245,16 +287,17 @@ export default function LandingExperience() {
                   <li key={source.url}><span>{source.title}</span><a href={source.url} target="_blank" rel="noreferrer">Open source ↗</a></li>
                 ))}
               </ul>
-              <p className="privacy-note">For this preview, your guess and selected doubt stay in this browser, alongside an anonymous browser ID cookie. No weight, phone number, or account is requested. Clear this site’s local storage and cookies to remove them.</p>
+              <p className="privacy-note">Your guess, selected doubt, results, streak and challenge check-ins are tied to a random anonymous browser ID. Clearing browser storage removes only the local copy; use the <a href="/privacy">privacy page</a> to delete its Steer Club server record. If a care request was sent to an external destination, deletion there is separate.</p>
+              <a className="care-soft-banner" href="/care">Questions that feel personal? Explore your care options <span aria-hidden="true">→</span></a>
             </section>
           </main>
 
           <footer className="site-footer">
             <div className="footer-top">
               <a className="wordmark" href="#top" aria-label="Steer Club, back to the beginning">
-                <span>steer</span><span className="club">club</span>
+                <BrandMark className="landing-brand-mark" />
               </a>
-              <a className="footer-care" href="#care-note">Explore your care options <span aria-hidden="true">→</span></a>
+              <a className="footer-care" href="/care">Explore your care options <span aria-hidden="true">→</span></a>
             </div>
             <div className="footer-bottom">
               <p>Educational, not medical advice. Talk to a doctor about what is right for you. No drug names, promises or weight targets.</p>

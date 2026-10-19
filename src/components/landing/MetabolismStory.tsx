@@ -1,44 +1,45 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import RoutineIllustration from "@/components/landing/RoutineIllustration";
 
 const scenes = [
   {
     time: "7am",
     title: "Chai, before the day begins",
     copy: "Chai and biscuits can bring a quick rise. What happens next depends on the whole meal and the person.",
-    image: "/manus-storage/async-images/XN9IeOPB1gAPKFwEHxOOhU/image-1.webp",
+    illustration: "chai",
     alt: "Hand-drawn glass of chai and a small plate of biscuits",
   },
   {
     time: "1pm",
     title: "Lunch, with a little balance",
     copy: "Roti, sabzi and dal sit together on the plate. A meal is more than one ingredient.",
-    image: "/manus-storage/async-images/XN9IeOPB1gAPKFwEHxOOhU/image-2.webp",
+    illustration: "lunch",
     alt: "Hand-drawn Indian thali with roti, dal and sabzi",
   },
   {
     time: "4pm",
     title: "The afternoon dip",
     copy: "Sleep, meals and the day around you all play a part. Hunger is a signal, not a character flaw.",
-    image: "/manus-storage/async-images/XN9IeOPB1gAPKFwEHxOOhU/image-3.webp",
+    illustration: "afternoon",
     alt: "Hand-drawn desk with a tiffin, chai glass and desk lamp",
   },
   {
     time: "8pm",
     title: "Dinner, without a moral score",
     copy: "There is no perfect plate here. A steady pattern that fits your life can matter more than one meal.",
-    image: "/manus-storage/async-images/XN9IeOPB1gAPKFwEHxOOhU/image-4.webp",
+    illustration: "dinner",
     alt: "Hand-drawn Indian dinner of dal, sabzi and roti",
   },
   {
     time: "after dinner",
     title: "A small walk counts",
     copy: "A gentle ten-minute walk may soften the after-meal rise for some people. It is an option, not a test.",
-    image: "/manus-storage/async-images/XN9IeOPB1gAPKFwEHxOOhU/image-5.webp",
+    illustration: "walk",
     alt: "Hand-drawn pair of walking shoes beside a doorway",
   },
-];
+] as const;
 
 export default function MetabolismStory() {
   const rootRef = useRef<HTMLElement>(null);
@@ -127,8 +128,8 @@ export default function MetabolismStory() {
           <p className="story-time" aria-live="polite">{active.time}</p>
           <h3 className="story-title">{active.title}</h3>
           <p className="story-copy">{sceneIndex === 2 ? <><em>“this is the 4pm hunger. not weak willpower.”</em> {active.copy}</> : active.copy}</p>
-          <div className="story-art-wrap" key={active.image}>
-            <img className="story-art" src={active.image} alt={active.alt} loading="lazy" decoding="async" />
+          <div className="story-art-wrap" key={active.illustration}>
+            <RoutineIllustration scene={active.illustration} alt={active.alt} />
           </div>
           <div className="story-curve-wrap" aria-label="Illustrative blood-sugar curve, not measured data">
             <svg className="story-curve" viewBox="0 0 432 160" preserveAspectRatio="none" aria-hidden="true">
@@ -146,7 +147,7 @@ export default function MetabolismStory() {
               <p className="story-time">{scene.time}</p>
               <h3 className="story-title">{scene.title}</h3>
               <p className="story-copy">{scene.copy}</p>
-              <img src={scene.image} alt={scene.alt} loading="lazy" decoding="async" />
+              <RoutineIllustration scene={scene.illustration} alt={scene.alt} />
             </li>
           ))}
         </ol>
